@@ -11,9 +11,14 @@ public class ExceptionController {
     throw new NullPointerException();
   }
 
-  @GetMapping("/runtime")
-  public void throwRuntimeException() {
-    throw new RuntimeException();
+  @GetMapping("/internal")
+  public void throwInternalServerError() {
+    throw new InternalError();
+  }
+
+  @GetMapping("/illegal")
+  public void throwIllegalArgumentException() {
+    throw new IllegalArgumentException();
   }
 
 }

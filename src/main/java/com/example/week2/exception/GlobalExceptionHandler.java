@@ -10,13 +10,13 @@ public class GlobalExceptionHandler {
 
   @ExceptionHandler(NullPointerException.class)
   public String handleNullPointerException() {
-    log.info("NullPointer Exception 처리 시작");
+    log.error("NullPointer Exception 처리 시작");
     return "NullPointer Exception 핸들링";
   }
 
-  @ExceptionHandler(RuntimeException.class)
-  public String handleRuntimeException() {
-    log.info("RuntimeException 처리 시작");
-    return "Runtime Exception 핸들링";
+  @ExceptionHandler(InternalError.class)
+  public String handleInternalError() {
+    log.error("InternalError 처리 시작");
+    return "InternalError 핸들링";
   }
 }
