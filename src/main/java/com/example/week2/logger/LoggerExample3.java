@@ -14,6 +14,7 @@ public class LoggerExample3 {
         .build();
 
     log.info("학생 이름은" + student.getName() + "입니다");
+    // logging level 을 error 을 해도 계산을 진행한다.
 
     log.info("학생 이름은 {} 입니다.", student.getName());
   }
