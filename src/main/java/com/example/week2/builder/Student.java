@@ -13,10 +13,18 @@ import lombok.extern.slf4j.Slf4j;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @ToString
 public class Student {
+
+  private Long id;
   private String name;
   private int age;
   private String school;
+
+  @Builder
+  public Student(String name, int age, String school) {
+    this.name = name;
+    this.age = age;
+    this.school = school;
+  }
 }

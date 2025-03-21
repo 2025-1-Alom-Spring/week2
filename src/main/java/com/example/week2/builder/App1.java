@@ -11,8 +11,13 @@ public class App1 {
 
   public static void main(String[] args) {
 
-    log.error("에러입니다.");
+    Student.StudentBuilder school = Student.builder()
+            .name("heeun")
+            .age(28)
+            .school("sejong");
 
-    throw new CustomException(ErrorCode.INVALID_REQUEST);
+    Student st = school.build();
+
+
   }
 }

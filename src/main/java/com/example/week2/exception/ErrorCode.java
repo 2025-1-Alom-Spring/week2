@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 public enum ErrorCode { // 직접 커스텀
 
   INVALID_REQUEST(HttpStatus.BAD_REQUEST, "잘못된 요청이 들어왔습니다"),;
-  //SEJONG_UNI(HttpStatus.BAD_GATEWAY, "출력하고싶은 메시지");
+  
 
 
   private final HttpStatus status;

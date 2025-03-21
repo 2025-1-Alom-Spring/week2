@@ -1,6 +1,7 @@
 package com.example.week2.exception;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -21,17 +22,21 @@ public class GlobalExceptionHandler {
     return "InternalError 핸들링";
   }
 
+
   @ExceptionHandler(CustomException.class)
-  public String handleCustomException() {
-    log.error("CustomeError 처리가 시작");
-    return "custom 에러처리 성공 !!";
+  public ResponseEntity<ErrorResponse> handleCustomeException(CustomException e) {
+    log.info("customError 처리 시작 {}", e.getMessage(), e);
+
+    ErrorCode errorCode = e.getErrorCode();
+    ErrorResponse response = ErrorResponse.builder()
+            .errorCode(errorCode)
+            .errorMessage(errorCode.getMessage())
+            .build();
+    return ResponseEntity.status(errorCode.getStatus()).body(response);
   }
 
 
-  public String sakjdflasj() {
-    System.out.println("dskljaf");
-    return " dsaklfjd";
-  }
+
 
 
 
