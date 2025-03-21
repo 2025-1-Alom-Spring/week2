@@ -3,7 +3,7 @@ package com.example.week2.exception;
 import lombok.Getter;
 
 @Getter
-public class CustomException extends RuntimeException{
+public class CustomException extends RuntimeException{ // 런타임 상속
 
   private final ErrorCode errorCode;
 
