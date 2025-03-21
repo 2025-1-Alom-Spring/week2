@@ -20,4 +20,17 @@ public class GlobalExceptionHandler {
     log.error("InternalError 처리 시작");
     return "InternalError 핸들링";
   }
+
+  @ExceptionHandler(CustomException.class)
+  public ResponseEntity<ErrorResponse> handleCustomException(CustomException e) {
+    log.error("CustomException 발생: {}", e.getMessage(), e);
+
+    ErrorCode errorCode = e.getErrorCode();
+
+    ErrorResponse response = ErrorResponse.builder()
+            .errorCode(errorCode)
+            .errorMessage(errorCode.getMessage())
+            .build();
+    return ResponseEntity.status(errorCode.getStatus()).body(response);
+  }
 }
