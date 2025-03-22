@@ -21,4 +21,9 @@ public class ExceptionController {
     throw new IllegalArgumentException();
   }
 
+  @GetMapping("/custom")
+  public void throwCustomException() {
+    throw new CustomException(ErrorCode.INVALID_REQUEST);
+  }
+
 }
