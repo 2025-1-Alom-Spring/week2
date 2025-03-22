@@ -13,5 +13,9 @@ public class LoggerExample1 {
     LOGGER.info("Info입니다");
     LOGGER.warn("Warn입니다");
     LOGGER.error("Error입니다");
+
+    //trace : 매우 상세한 디버깅 정보
+    //debug : 디버깅에 유용한 정보
+    //............................
   }
 }
