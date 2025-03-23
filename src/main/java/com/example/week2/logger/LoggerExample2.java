@@ -2,7 +2,7 @@ package com.example.week2.logger;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+@Slf4j  //logger 를 자동 생성해줌
 public class LoggerExample2 {
 
   public static void main(String[] args) {

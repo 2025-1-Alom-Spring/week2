@@ -11,9 +11,9 @@ public class SwaggerConfig {
   @Bean
   public OpenAPI openAPI() {
     return new OpenAPI()
-        .info(new Info().title("Alom Spring Study")
-            .version("1.0")
-            .description("Alom Spring Study API 문서"));
+        .info(new Info().title("Alom Spring Study") //제목 지정
+            .version("1.0") //버전 지정
+            .description("Alom Spring Study API 문서"));  //디스크립션 지정
   }
 
 }
