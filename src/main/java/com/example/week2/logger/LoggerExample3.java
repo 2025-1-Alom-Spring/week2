@@ -14,7 +14,6 @@ public class LoggerExample3 {
         .build();
 
     log.info("학생 이름은" + student.getName() + "입니다");
-
     log.info("학생 이름은 {} 입니다.", student.getName());
   }
 }
