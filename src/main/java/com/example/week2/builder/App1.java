@@ -1,8 +1,17 @@
 package com.example.week2.builder;
 
+import com.example.week2.exception.CustomException;
+import com.example.week2.exception.ErrorCode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class App1 {
 
-  public static void main(String[] args) {
+  private static final Logger log = LoggerFactory.getLogger(App1.class);  //@Slf4j 입력 시 자동 생성
 
+  public static void main(String[] args) {
+    log.error("에러!");
+
+    throw new CustomException(ErrorCode.INVALID_REQUEST);
   }
 }
