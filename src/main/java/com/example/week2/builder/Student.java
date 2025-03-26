@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
 @Getter
 @Setter
@@ -13,6 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Builder
 @ToString
+@Slf4j
 public class Student {
   private String name;
   private int age;
