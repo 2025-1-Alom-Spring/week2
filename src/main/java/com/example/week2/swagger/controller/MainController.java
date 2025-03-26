@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {
 
   @GetMapping("/main")
-  public String mainMethod(@RequestParam String str) {
+  public String mainMethod(@RequestParam("Error") String str) {
     return str;
   }
 
