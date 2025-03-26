@@ -20,13 +20,13 @@ public class GlobalExceptionHandler {
     log.error("InternalError 처리 시작");
     return "InternalError 핸들링";
   }
-  /*
+/*
   @ExceptionHandler(CustomException.class)
   public String handleCustomException() {
     log.error("커스텀 exception 발생 !!!");
     return "커스텀 예외처리 성공 !!";
   }
-  */
+ */
   @ExceptionHandler(CustomException.class)
   public ResponseEntity<ErrorResponse> handleCustomException(CustomException e) {
     log.error("CustomException 발생: {}" , e.getMessage(), e);
